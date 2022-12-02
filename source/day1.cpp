@@ -3,7 +3,10 @@
 #include <string.h>
 #include <vector>
 #include<bits/stdc++.h> 
+#include <chrono>
 using namespace std;
+using namespace std::chrono;
+
 
 int part1(){
     ifstream myFile;
@@ -68,7 +71,11 @@ int part2(){
 }
 
 int main(){
+    auto start = high_resolution_clock::now();
     int answer1 = part1();
     int answer2 = part2();
+    auto stop = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(stop - start);
+    cout << "Time taken by function: "<< duration.count() << " microseconds" << endl;
     return EXIT_SUCCESS;
 }
