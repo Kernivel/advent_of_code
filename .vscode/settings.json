@@ -4,6 +4,8 @@
         "iostream": "cpp",
         "unordered_map": "cpp",
         "map": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "fstream": "cpp",
+        "tuple": "cpp"
     }
 }
