@@ -85,7 +85,7 @@ int part1()
         cout << "Value is :" << value <<"\n";
         totalScore += value;
     }
-    
+    myFile.close();
     return totalScore;
 }
 
@@ -119,6 +119,7 @@ int part2(){
         }
         
     }
+    myFile.close();
     return totalScore;
 }
 

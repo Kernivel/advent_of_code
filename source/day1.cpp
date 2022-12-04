@@ -29,6 +29,7 @@ int part1(){
     }
     maxCalories = maxCalories<currentElfCalories?currentElfCalories:maxCalories;
     cout<<"The elve with the most calories is carrying "<< maxCalories << " calories.\n";
+    myFile.close();
     return maxCalories;
 }
 
@@ -67,6 +68,7 @@ int part2(){
         total+=-*it;
     }
     cout << "Total is : " << total <<"\n";
+    myFile.close();
     return total;
 }
 

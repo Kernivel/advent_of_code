@@ -51,6 +51,7 @@ int part1()
         }
     }
     cout << "Total points : " << totalScore << "\n";
+    myFile.close();
     return totalScore;
 }
 
@@ -103,6 +104,7 @@ int part2(){
         }
     }
     cout << "Total points : " << totalScore << "\n";
+    myFile.close();
     return totalScore;
 }
 
