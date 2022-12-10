@@ -30,16 +30,16 @@ int checkCycle(unsigned int cycle,map<unsigned int,bool>& triggers,int x)
     int signalStrength = 0;
     if(triggers.find(cycle-1) != triggers.end() && !triggers[cycle -1])
     {
-        cout << "At cycle " << cycle << "\n";
+        //cout << "At cycle " << cycle << "\n";
         signalStrength = (cycle-1)*x;
         triggers[cycle -1] = true;
-        cout << (cycle-1)*x<<"\n";
+        //cout << (cycle-1)*x<<"\n";
     }else if (triggers.find(cycle) != triggers.end() && !triggers[cycle])
     {
-        cout << "At cycle " << cycle << "\n";
+        //cout << "At cycle " << cycle << "\n";
         signalStrength = (cycle)*x;
         triggers[cycle] = true;
-        cout << cycle*x<<"\n";
+        //cout << cycle*x<<"\n";
     }
     return signalStrength;
 }
@@ -168,8 +168,8 @@ void printImage(string lineImage,const int width,const int height)
 int main()
 {
     //part1 is part2 with a smaller cord so res1 part(string,2)
-    //int res1 = part1("./files/day10/input.txt");
-    //cout <<"Res 1 is : "<< res1 <<"\n";
+    int res1 = part1("./files/day10/input.txt");
+    cout <<"Res 1 is : "<< res1 <<"\n";
     part2("./files/day10/input.txt",40,6);
     //cout <<"Res 2 is : "<< res2 <<"\n";
     return EXIT_SUCCESS;
