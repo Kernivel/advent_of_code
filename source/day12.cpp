@@ -222,10 +222,15 @@ int main()
         Part1 resTemp = Part1(res1.grid,startPoss[i],endPos);
         //cout << "Starting at : ["<<startPoss[i].first<<"]["<<startPoss[i].second<<"] = " << resTemp.grid[startPoss[i].first][startPoss[i].second]<<"\n";
         resTemp.exploreD(resTemp.startPos.first,resTemp.startPos.second,0);
-        //cout << "res is " <<resTemp.dpMap[make_pair(resTemp.endPos.first,resTemp.endPos.second)]<<"\n";
-        if(resTemp.dpMap[make_pair(resTemp.endPos.first,resTemp.endPos.second)]<bestRes && resTemp.dpMap[make_pair(resTemp.endPos.first,resTemp.endPos.second)] >0)
+        int possRes = resTemp.dpMap[make_pair(resTemp.endPos.first,resTemp.endPos.second)];
+        if(possRes>0)
         {
-            bestRes = res1.dpMap[make_pair(resTemp.endPos.first,resTemp.endPos.second)];
+            cout<<"PossRes :" << possRes<<"\n";
+            if(possRes<bestRes)
+            {
+                cout << "New best res" <<possRes<<"\n";
+                bestRes = possRes;
+            }
         }
     }
     cout <<"Res 2 is : "<< bestRes <<"\n";
